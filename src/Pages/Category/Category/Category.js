@@ -1,10 +1,17 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import NewsCard from '../../Shared/NewsCard/NewsCard';
 
 const Category = () => {
+    const catagory = useLoaderData()
     return (
-        <div>
-            <h2>This is Category</h2>
-        </div>
+        <>
+            <h2 className='mb-5'> This catagory has {catagory.length} News </h2>
+            {
+                catagory.map(news => <NewsCard key={news._id} news={news} />)
+            }
+        </>
+
     );
 };
 
