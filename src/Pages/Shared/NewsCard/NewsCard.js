@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 
 const NewsCard = ({ news }) => {
-    const {_id, title, total_view, image_url, details, author, rating } = news
-    console.log(news);
+    const { _id, title, total_view, image_url, details, author, rating } = news
+
     return (
         <Card className="mb-5">
             <Card.Header className='d-flex justify-content-between align-items-center'>

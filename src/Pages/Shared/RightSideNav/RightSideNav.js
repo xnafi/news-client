@@ -23,7 +23,7 @@ const RightSideNav = () => {
     const handleLogOut = () => {
         logOut()
             .then(() => {
-                alert('logout succeed')
+                console.log('logout succeed')
             })
             .catch(er => console.error(er))
     }
