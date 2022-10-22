@@ -21,12 +21,12 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#features">  <Link to='/'>All News</Link></Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        <Link to='/'>  <Link to='/'>All News</Link></Link>
+
                     </Nav>
                     <Nav className='d-felx justify-content-center align-items-center'>
                         {
-                            user ? <></> : <> <Link to="/login">Login</Link> <Link to="/register">Register</Link></>
+                            user ? <></> : <> <Link to="/login" className='me-2'>Login</Link> <Link to="/register">Register</Link></>
                         }
                         <Nav.Link >{user ? user.displayName : <></>}</Nav.Link>
                         <Image roundedCircle style={{ height: '60px' }} src={user && user.photoURL}>
