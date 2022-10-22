@@ -15,17 +15,17 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/news')
+                loader: () => fetch('https://news-express-server.vercel.app/news')
             },
             {
                 path: '/category/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/catagory/${params.id}`),
+                loader: ({ params }) => fetch(`https://news-express-server.vercel.app/catagory/${params.id}`),
                 element: <Category></Category>
             },
             {
                 path: '/news/:id',
                 element: <PrivateRoute> <News /></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/news/${params.id}`)
+                loader: ({ params }) => fetch(`https://news-express-server.vercel.app/news/${params.id}`)
             }
             ,
             {
